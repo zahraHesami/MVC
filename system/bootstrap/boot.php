@@ -1,0 +1,17 @@
+<?php
+
+use System\bootstrap\Autoload;
+
+session_start();
+
+require_once ('system/config.php');
+require_once ('system/bootstrap/Autoload.php');
+
+$autoload = new Autoload();
+$autoload->autoloader();
+
+
+
+$router = new \System\router\Routing();
+
+$router->run();
