@@ -6,9 +6,9 @@ use System\Traits\View;
 class Controller
 {
  
-    use Redirect;
+     use Redirect;
 
-   use View;
+     use View;
 
 
 

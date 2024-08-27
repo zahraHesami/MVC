@@ -29,9 +29,10 @@ class Category extends Model
 
       public function insert($values)
       {
-       $query="INSERT INTO categories(name,description,created_at) VALUES(?,?,now());";
-       $this->execute($query,$values);
-       $this->closeConnection();
+
+          $query = "INSERT INTO `categories` ( `name`, `description`, created_at) VALUES ( ?, ?, now() );";
+          $this->execute($query, array_values($values));
+          $this->closeConnection();
 
       }
       public function update($id, $values)
